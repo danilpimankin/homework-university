@@ -5,16 +5,16 @@
 #include <QRegularExpression>
 using namespace std;
 
-class Employee
+class Person
 {
 public:
     QString firstName;
     QString lastName;
     QString patronymic;
 public:
-    Employee();//конструктор
-    Employee(QString fullName);//конструтор одной строки
-    Employee(const Employee&);
+    Person();//конструктор
+    Person(QString fullName);//конструтор одной строки
+    Person(const Employee&);
     void setFirstName(QString _firstName);
     void setLastName(QString _lastName);
     void setPatronymic(QString _patronymic);
