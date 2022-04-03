@@ -1,5 +1,5 @@
-#ifndef EMPLOYEE_H
-#define EMPLOYEE_H
+#ifndef PERSON_H
+#define PERSON_H
 #include<iostream>
 #include <QString>
 #include <QRegularExpression>
