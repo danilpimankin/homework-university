@@ -8,8 +8,8 @@ CONFIG -= app_bundle
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-        Employee.cpp \
-        EmployeeData.cpp \
+        Person.cpp \
+        PersonKeeper.cpp \
         main.cpp
 
 TRANSLATIONS += \
@@ -26,8 +26,8 @@ HEADERS += \
     EStack.h \
     EStackEmpty.h \
     EStackException.h \
-    Employee.h \
-    EmployeeData.h
+    Person.h \
+    PersonKeeper.h
 
 DISTFILES += \
         Output \
