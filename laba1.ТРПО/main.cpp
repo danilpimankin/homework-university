@@ -1,7 +1,7 @@
 #include <QCoreApplication>
 #include <EStack.h>
-#include<Employee.h>
-#include<EmployeeData.h>
+#include<Person.h>
+#include<PersonKeeper.h>
 
 int main(int argc, char *argv[])
 {
