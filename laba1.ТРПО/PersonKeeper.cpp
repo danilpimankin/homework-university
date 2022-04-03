@@ -1,33 +1,33 @@
-#include "EmployeeData.h"
+#include "PersonKeeper.h"
 
-EmpData::EmpData()
+PersonKeeper::PersonKeeper()
 {
 
 }
 
-EmpData::~EmpData()
+PersonKeeper::~PersonKeeper()
 {
     //нет динамически созданных объектов
 }
 
-EmpData &EmpData::Example()
+PersonKeeper &PersonKeeper::Example()
 {
-    static EmpData example;//для того чтобы не создавать ещё раз при вызове
+    static PersonKeeper example;//для того чтобы не создавать ещё раз при вызове
 
     return example;
 }
 
 
-int EmpData::Size()
+int PersonKeeper::Size()
 {
     return stack.Size();
 }
 
-void EmpData::Clear()
+void PersonKeeper::Clear()
 {
     return stack.Clear();
 }
-void EmpData::readEmp(QString path)
+void PersonKeeper::readPerson(QString path)
 {
     QFile file(path);
 
@@ -41,7 +41,7 @@ void EmpData::readEmp(QString path)
 
     while (stream.readLineInto(&line))
     {
-        Employee pip(line);
+        Person pip(line);
 
         stack.Push(pip);
 
@@ -51,7 +51,7 @@ void EmpData::readEmp(QString path)
     file.close();
 }
 
-void EmpData::writeEmp(QString way) const
+void PersonKeeper::writePeron(QString way) const
 {
     QFile file(way);
 
@@ -62,7 +62,7 @@ void EmpData::writeEmp(QString way) const
 
     QTextStream stream(&file);
 
-    stack.Iter([&]( const Employee &value)
+    stack.Iter([&]( const Person &value)
     {
         stream << value.getLastName() << '\t' << value.getFirstName() << '\t' << value.getPatronymic() << Qt::endl;
 
