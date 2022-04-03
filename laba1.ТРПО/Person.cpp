@@ -1,12 +1,12 @@
-#include "Employee.h"
+#include "Person.h"
 
-Employee::Employee()//конструктор
+Person::Person()//конструктор
 {
     firstName = "pip";
     lastName = "piip";
     patronymic = "piiip";
 }
-Employee::Employee(QString fullName)
+Person::Person(QString fullName)
 {
     QStringList words = fullName.split(QRegularExpression("\\s+"), Qt::SkipEmptyParts); //разбиваем слово на части
 
@@ -25,22 +25,22 @@ Employee::Employee(QString fullName)
             patronymic = words[2];
         }
 }
-Employee::Employee(const Employee& employee)
+Person::Person(const Person& person)
 {
-    firstName = employee.firstName;
-    lastName = employee.lastName;
-    patronymic = employee.patronymic;
+    firstName = person.firstName;
+    lastName = person.lastName;
+    patronymic = person.patronymic;
 }
 
-void Employee::setFirstName(QString newFirstName)
+void Person::setFirstName(QString newFirstName)
 {
     firstName = newFirstName;
 }
-void Employee::setLastName(QString newLastName)
+void Person::setLastName(QString newLastName)
 {
     lastName = newLastName;
 }
-void Employee::setPatronymic(QString newPatronymic)
+void Person::setPatronymic(QString newPatronymic)
 {
     patronymic = newPatronymic;
 }
